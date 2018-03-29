@@ -6,11 +6,11 @@ Time spent: **4** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+1. Authenticated Cross-Site Scripting (XSS) via Media File Metadata
+  - [ ] Summary: Meta information in audio files isn't sanitized by Wordpress correctly, so Wordpress is vulnerable to a XSS attack if an audio file containing XSS is placed in an audio playlist.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2 (Released on 2015-04-23)
+    - Fixed in version: 4.2.13
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
