@@ -10,11 +10,11 @@ Time spent: **4** hours spent in total
   - [ ] Summary: Meta information in audio files isn't sanitized by Wordpress correctly, so Wordpress is vulnerable to a XSS attack if an audio file containing XSS is placed in an audio playlist.
     - Vulnerability types: XSS
     - Tested in version: 4.2 (Released on 2015-04-23)
-    - Fixed in version: 4.2.13
+    - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: Create an audio file that contains XSS javascript code in the meta data, or download one such file from https://www.securify.nl/advisory/SFY20160742/xss.mp3. Then, have an administrator upload the audio file to a post as part of an audio playlist. Anytime that that post is opened, the XSS javascript will be triggered.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
