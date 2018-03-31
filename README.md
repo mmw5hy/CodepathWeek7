@@ -30,7 +30,7 @@ Time spent: **4** hours spent in total
     - Tested in version: 4.2 (Released on 2015-04-23)
     - Fixed in version: 4.2.4
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/comment_xss.gif)
-  - [ ] Steps to recreate: Copy the text "<a href='/wp-admin/' title="onclick='" Title='" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(1)//'>Test</a>" and post it as a comment. The preview_theme_ob_filter_callback(...) will remove the "onclick" and " Title" text but also insert our "onmouseover" and style attributes. This will make a large box over the top of the post with this comment that whenever is moused over, will execute the javascript code we supplied, which is thus an XSS vulnerability.
+  - [ ] Steps to recreate: Copy the text ```"<a href='/wp-admin/' title="onclick='" Title='" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(1)//'>Test</a>"``` and post it as a comment. The preview_theme_ob_filter_callback(...) will remove the "onclick" and " Title" text but also insert our "onmouseover" and style attributes. This will make a large box over the top of the post with this comment that whenever is moused over, will execute the javascript code we supplied, which is thus an XSS vulnerability.
   - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
