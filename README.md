@@ -14,6 +14,7 @@ Time spent: **4** hours spent in total
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/audio_playlist.gif)
   - [ ] Steps to recreate: Create an audio file that contains XSS javascript code in the meta data, or download one such file from https://www.securify.nl/advisory/SFY20160742/xss.mp3. Then, have an administrator upload the audio file to a post as part of an audio playlist. Anytime that that post is opened, the XSS javascript will be triggered.
   - [ ] Affected source code:
+    - [Source code file](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/includes/media.php)
     - [Github pull request that addressed issue.](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
 2. Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: When long comments (over 64 kb) are stored in the database, they are truncated and when displayed are displayed as malformed html, allowing javascript code to be executed. 
