@@ -21,17 +21,17 @@ Time spent: **4** hours spent in total
     - Tested in version: 4.2 (Released on 2015-04-23)
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/big_text_xss.gif)
-  - [ ] Steps to recreate: Copy the text from https://klikki.fi/adv/wordpress2.html and replace [64 kb] with over 64 kb of text. Alternatively, write html code that calls a javascript function with 64 kb of text or more in the comment. The javascript code will be executed when the comment is loaded.
+  - [ ] Steps to recreate: Copy the text "<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>" and replace [64 kb] with over 64 kb of text. The javascript code will be executed when the comment is loaded.
   - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     - [Link 1]()
-3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
+3. Legacy Theme Preview Cross-Site Scripting (XSS)
+  - [ ] Summary: Due to an error in one of Wordpress's filter functions, comments can be made that call javascript and allow an XSS exploit.
+    - Vulnerability types: XSS
     - Tested in version: 4.2 (Released on 2015-04-23)
-    - Fixed in version: 
+    - Fixed in version: 4.2.4
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/comment_xss.gif)
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
+  - [ ] Steps to recreate: Copy the text "<a href='/wp-admin/' title="onclick='" Title='" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(1)//'>Test</a>" and post it as a comment. The preview_theme_ob_filter_callback(...) will remove the "onclick" and " Title" text but also insert our "onmouseover" and style attributes. This will make a large box over the top of the post with this comment that whenever is moused over, will execute the javascript code we supplied, which is thus an XSS vulnerability.
+  - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
 ## Assets
