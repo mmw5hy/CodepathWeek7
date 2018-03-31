@@ -13,23 +13,23 @@ Time spent: **4** hours spent in total
     - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/audio_playlist.gif)
   - [ ] Steps to recreate: Create an audio file that contains XSS javascript code in the meta data, or download one such file from https://www.securify.nl/advisory/SFY20160742/xss.mp3. Then, have an administrator upload the audio file to a post as part of an audio playlist. Anytime that that post is opened, the XSS javascript will be triggered.
-  - [ ] Affected source code:
+  - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
     - [Link 1](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
-1. (Required) Vulnerability Name or ID
+2. Unauthenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: When long comments (over 64 kb) are stored in the database, they are truncated and when displayed are displayed as malformed html, allowing javascript code to be executed. 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2 (Released on 2015-04-23)
+    - Fixed in version: 4.2.1
+  - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/big_text_xss.gif)
+  - [ ] Steps to recreate: Copy the text from https://klikki.fi/adv/wordpress2.html and replace [64 kb] with over 64 kb of text. Alternatively, write html code that calls a javascript function with 64 kb of text or more in the comment. The javascript code will be executed when the comment is loaded.
+  - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    - [Link 1]()
+3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
-    - Tested in version:
+    - Tested in version: 4.2 (Released on 2015-04-23)
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/comment_xss.gif)
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
